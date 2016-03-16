@@ -37,11 +37,13 @@ end
 
 #################### name_generator
 result = name_generator("String")
-assert_equal("xX_StRiNg_Xx", result, "name_generator method expected \"xX_StRiNg_Xx\" but returned #{result}")
+assert_equal("xX_StRiNg_Xx", result, "name_generator method expected \"xX_StRiNg_Xx\" \
+but returned \"#{result}\"")
 
 #################### encasing_characters
 result = encasing_characters("KyleLaughlin")
-assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected \"xX_String_Xx\" but returned #{result}")
+assert_equal("xX_KyleLaughlin_Xx1", result, "encasing_characters method expected \
+\"xX_KyleLaughlin_Xx\" but returned \"#{result}\"")
 
 #TEST FOUR######## encasing_characters
 #result = encasing_characters("Kyle Laughlin")
@@ -49,8 +51,12 @@ assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected 
 
 ################### remove_whitespace
 result = remove_whitespace("Kyle Laughlin")
-assert_equal("KyleLaughlin", result, "remove_whitespace method expected \"KyleLaughlin\" but returned #{result}")
+assert_equal("KyleLaughlin", result, "remove_whitespace method expected \"KyleLaughlin\" \
+but returned \"#{result}\"")
 
 ################### remove_punctuation
 result = remove_punctuation("$@Kyl!eL<augh()lin?#")
-assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleLaughlin\" but returned #{result}")
+assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleLaughlin\" \
+but returned \"#{result}\"")
+
+################### remove_numbers

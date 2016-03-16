@@ -16,3 +16,7 @@ end
 def remove_whitespace(string)
   string.gsub(/\s/,"")
 end
+
+def remove_punctuation(string)
+  string.gsub(/\W/,"")
+end
