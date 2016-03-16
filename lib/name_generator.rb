@@ -7,7 +7,7 @@ def name_generator(name)
   myspace_name = remove_whitespace(name)
   myspace_name = remove_punctuation(myspace_name)
   myspace_name = remove_numbers(myspace_name)
-  myspace_name = alternate_capitalization1(myspace_name)
+  myspace_name = alternate_capitalization(myspace_name)
   myspace_name = encasing_characters(myspace_name)
 end
 
@@ -28,20 +28,6 @@ def remove_numbers(string)
 end
 
 def alternate_capitalization(string)
-  i = 0
-  alt_cap_string = ""
-  while i < (string.length)
-    if i % 2 == 0
-      alt_cap_string << string[i].upcase
-    else
-      alt_cap_string << string[i]
-    end
-    i += 1
-  end
-  alt_cap_string
-end
-
-def alternate_capitalization1(string)
   alt_cap_string = ""
   (0...string.length).each do |i|
     if i % 2 ==0

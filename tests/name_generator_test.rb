@@ -45,10 +45,6 @@ result = encasing_characters("KyleLaughlin")
 assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected \
 \"xX_KyleLaughlin_Xx\" but returned \"#{result}\"")
 
-#TEST FOUR######## encasing_characters
-#result = encasing_characters("Kyle Laughlin")
-#refute_equal("Kyle Laughlin", result, "\"Kyle Laughlin\" passed but should have failed")
-
 ################### remove_whitespace
 result = remove_whitespace("Kyle Laughlin")
 assert_equal("KyleLaughlin", result, "remove_whitespace method expected \"KyleLaughlin\" \
