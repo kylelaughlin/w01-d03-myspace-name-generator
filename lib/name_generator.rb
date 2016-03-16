@@ -3,7 +3,13 @@
 
 require 'pry'
 
-def name_generator(name)
+#Run string modification methods: remove_whitespace, remove_punctuation, remove_numbers
+#alternate_capitalization, and encasing_characters
+#
+# +name: a string representing the name to be altered
+#
+#Returns the modified myspace name
+def myspace_name_generator(name)
   myspace_name = remove_whitespace(name)
   myspace_name = remove_punctuation(myspace_name)
   myspace_name = remove_numbers(myspace_name)
@@ -11,32 +17,37 @@ def name_generator(name)
   myspace_name = encasing_characters(myspace_name)
 end
 
-def encasing_characters(string)
-  string.prepend("xX_").concat("_Xx")
+#Adds a "xX_" to the front of the string and "_Xx" to the end of a string
+#
+# +string: a string representing the modified name
+#
+#Returns the modified name (string)
+def encasing_characters(name)
+  name.prepend("xX_").concat("_Xx")
 end
 
-def remove_whitespace(string)
-  string.gsub(/\s/,"")
+def remove_whitespace(name)
+  name.gsub(/\s/,"")
 end
 
-def remove_punctuation(string)
-  string.gsub(/\W/,"")
+def remove_punctuation(name)
+  name.gsub(/\W/,"")
 end
 
-def remove_numbers(string)
-  string.gsub(/[0-9]/,"")
+def remove_numbers(name)
+  name.gsub(/[0-9]/,"")
 end
 
-def alternate_capitalization(string)
-  alt_cap_string = ""
-  (0...string.length).each do |i|
+def alternate_capitalization(name)
+  alt_cap_name = ""
+  (0...name.length).each do |i|
     if i % 2 ==0
-      alt_cap_string << string[i].upcase
+      alt_cap_name << name[i].upcase
     else
-      alt_cap_string << string[i].downcase
+      alt_cap_name << name[i].downcase
     end
   end
-  alt_cap_string
+  alt_cap_name
 end
 
 

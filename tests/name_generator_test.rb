@@ -36,7 +36,7 @@ def refute_equal (expected, actual, message)
 end
 
 #################### name_generator
-result = name_generator("String")
+result = myspace_name_generator("String")
 assert_equal("xX_StRiNg_Xx", result, "name_generator method expected \"xX_StRiNg_Xx\" \
 but returned \"#{result}\"")
 
