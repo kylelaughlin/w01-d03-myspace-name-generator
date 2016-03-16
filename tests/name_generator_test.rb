@@ -35,17 +35,17 @@ def refute_equal (expected, actual, message)
   end
 end
 
-#################### name_generator
+#################### myspace_name_generator
 result = myspace_name_generator(" <<Kyle Laughlin1988>> ")
 assert_equal("xX_KyLeLaUgHlIn_Xx", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
 but returned \"#{result}\"")
 
-#################### name_generator
+#################### myspace_name_generator
 result = myspace_name_generator("")
 assert_equal("", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
 but returned \"#{result}\"")
 
-#################### name_generator
+#################### myspace_name_generator
 result = myspace_name_generator("348:?# 5&*  ")
 assert_equal("", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
 but returned \"#{result}\"")
