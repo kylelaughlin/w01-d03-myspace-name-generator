@@ -36,8 +36,8 @@ def refute_equal (expected, actual, message)
 end
 
 #################### name_generator
-result = myspace_name_generator("String")
-assert_equal("xX_StRiNg_Xx", result, "name_generator method expected \"xX_StRiNg_Xx\" \
+result = myspace_name_generator(" <<Kyle Laughlin1988>> ")
+assert_equal("xX_KyLeLaUgHlIn_Xx", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
 but returned \"#{result}\"")
 
 #################### encasing_characters
@@ -45,20 +45,15 @@ result = encasing_characters("KyleLaughlin")
 assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected \
 \"xX_KyleLaughlin_Xx\" but returned \"#{result}\"")
 
-################### remove_whitespace
-#result = remove_whitespace("Kyle Laughlin")
-#assert_equal("KyleLaughlin", result, "remove_whitespace method expected \"KyleLaughlin\" \
-#but returned \"#{result}\"")
-
 ################### remove_punctuation
 result = leave_numerical_characters("  $@Ky324l!eL  <aug h()l4in?#")
 assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleLaughlin\" \
 but returned \"#{result}\"")
 
-################### remove_numbers
-#result = remove_numbers("45Kyle56Laugh4367lin3")
-#assert_equal("KyleLaughlin", result, "remove_numbers method expected \"KyleLaughlin\" \
-#but returned \"#{result}\"")
+################### remove_punctuation
+result = leave_numerical_characters("% ; Ky45,,le   Lau45][]gh7lin       ")
+assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleLaughlin\" \
+but returned \"#{result}\"")
 
 ################## alternate_capitalization
 result = alternate_capitalization("kylelaughlin")
