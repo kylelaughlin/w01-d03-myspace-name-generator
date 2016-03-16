@@ -45,12 +45,12 @@ result = encasing_characters("KyleLaughlin")
 assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected \
 \"xX_KyleLaughlin_Xx\" but returned \"#{result}\"")
 
-################### remove_punctuation
+################### leave_numerical_characters
 result = leave_numerical_characters("  $@Ky324l!eL  <aug h()l4in?#")
 assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleLaughlin\" \
 but returned \"#{result}\"")
 
-################### remove_punctuation
+################### leave_numerical_characters
 result = leave_numerical_characters("% ; Ky45,,le   Lau45][]gh7lin       ")
 assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleLaughlin\" \
 but returned \"#{result}\"")
