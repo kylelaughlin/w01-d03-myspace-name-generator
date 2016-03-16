@@ -42,7 +42,7 @@ but returned \"#{result}\"")
 
 #################### encasing_characters
 result = encasing_characters("KyleLaughlin")
-assert_equal("xX_KyleLaughlin_Xx1", result, "encasing_characters method expected \
+assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected \
 \"xX_KyleLaughlin_Xx\" but returned \"#{result}\"")
 
 #TEST FOUR######## encasing_characters
@@ -60,3 +60,6 @@ assert_equal("KyleLaughlin", result, "remove_punctuation method expected \"KyleL
 but returned \"#{result}\"")
 
 ################### remove_numbers
+result = remove_numbers("45Kyle56Laugh4367lin3")
+assert_equal("KyleLaughlin", resutl, "remove_numbers method expected \"KyleLaughlin\" \
+but returned \"#{result}\"")
