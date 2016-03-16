@@ -10,9 +10,7 @@ require 'pry'
 #
 #Returns the modified myspace name
 def myspace_name_generator(name)
-  #myspace_name = remove_whitespace(name)
   myspace_name = leave_numerical_characters(name)
-  #myspace_name = remove_numbers(myspace_name)
   myspace_name = alternate_capitalization(myspace_name)
   myspace_name = encasing_characters(myspace_name)
 end
@@ -26,24 +24,20 @@ def encasing_characters(name)
   name.prepend("xX_").concat("_Xx")
 end
 
-#Removes all whitespace from a string
-#
-# +name: a string representing the name
-#
-#Returns the modified name with all whitespaces removed
-#def remove_whitespace(name)
-#  name.gsub(/\s/,"")
-#end
-
-#Removes all characters that are not A-Z, a-z or 0-9
+#Removes all characters that are not A-Z, a-z, included whitespace
 #
 # +name: a string representing the modified name
 #
-#Returns the modified name that contains only A-Z, a-z, and 0-9 characters
+#Returns the modified name that contains only A-Z and a-z characters
 def leave_numerical_characters(name)
   name.gsub(/[^A-Za-z]/,"")
 end
 
+#Alternates the capitalization of each character starting with a capital letter.
+#
+# +name: a sring representing the modified name
+#
+#Returns the modified name with alternating capitalization in each character
 def alternate_capitalization(name)
   alt_cap_name = ""
   (0...name.length).each do |i|
