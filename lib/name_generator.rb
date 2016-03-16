@@ -1,7 +1,6 @@
 # You'll have to create your own method(s) here and define them. Use patterns like
 # you've seen elsewhere.
 
-require 'pry'
 
 # Run string modification methods: leave_numerical_characters, alternate_capitalization,
 # and encasing_characters
