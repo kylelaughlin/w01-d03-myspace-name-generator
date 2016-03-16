@@ -28,12 +28,14 @@ end
 def alternate_capitalization(string)
   i = 0
   alt_cap_string = ""
-  while i < (string.length - 1)
-    if i%2 == 0
+  while i < (string.length)
+    if i % 2 == 0
       alt_cap_string << string[i].upcase
     else
       alt_cap_string << string[i]
     end
     i += 1
   end
+  alt_cap_string
 end
+binding.pry

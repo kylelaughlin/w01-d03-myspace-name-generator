@@ -64,7 +64,7 @@ result = remove_numbers("45Kyle56Laugh4367lin3")
 assert_equal("KyleLaughlin", result, "remove_numbers method expected \"KyleLaughlin\" \
 but returned \"#{result}\"")
 
-################## downcase_name
-result = downcase_name("Kyle Laughlin")
-assert_equal("kyle laughlin"), result, "downcase_name method expected \"kyle laughlin\" \
-but returned \"#{result}\""
+################## alternate_capitalization
+result = alternate_capitalization("kylelaughlin")
+assert_equal("KyLeLaUgHlIn", result, "alternate_capitalization method expected \"KyLeLaUgHlIn\" \
+but returned \"#{result}\"")
