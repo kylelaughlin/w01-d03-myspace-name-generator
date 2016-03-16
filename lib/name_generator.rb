@@ -19,21 +19,32 @@ end
 
 #Adds a "xX_" to the front of the string and "_Xx" to the end of a string
 #
-# +string: a string representing the modified name
+# +name: a string representing the modified name
 #
 #Returns the modified name (string)
 def encasing_characters(name)
   name.prepend("xX_").concat("_Xx")
 end
 
+#Removes all whitespace from a string
+#
+# +name: a string representing the name
+#
+#Returns the modified name with all whitespaces removed
 def remove_whitespace(name)
   name.gsub(/\s/,"")
 end
 
+#Removes all characters that are not A-Z, a-z or 0-9
+#
+# +name: a string representing the modified name
+#
+#Returns the modified name that contains only A-Z, a-z, and 0-9 characters
 def remove_punctuation(name)
   name.gsub(/\W/,"")
 end
 
+#Removes 
 def remove_numbers(name)
   name.gsub(/[0-9]/,"")
 end
