@@ -1,5 +1,5 @@
 require_relative '../lib/name_generator.rb'
-
+require 'pry'
 # Define whatever methods you need first
 
 # Now run your actual tests, making sure to do output as necessary
@@ -28,17 +28,25 @@ end
 #
 # Returns "-" if successful and message if failed
 def refute_equal (expected, actual, message)
-  if ! expected == actual
+  if !(expected == actual)
     puts "-"
   else
     puts message
   end
 end
 
-#TEST ONE#########
+#################### name_generator
 result = name_generator("String")
-assert_equal("xX_StRiNg_Xx",result,"Expected xX_StRiNg_Xx but failed")
+assert_equal("xX_StRiNg_Xx", result, "Expected \"xX_StRiNg_Xx\" but failed")
 
-#TEST TWO#########
-result = name_generator("String")
-refute_equal()
+#################### encasing_characters
+result = encasing_characters("KyleLaughlin")
+assert_equal("xX_Kylelaughlin_Xx", result, "Expected \"xX_String_Xx\"")
+
+#TEST FOUR######## encasing_characters
+#result = encasing_characters("Kyle Laughlin")
+#refute_equal("Kyle Laughlin", result, "\"Kyle Laughlin\" passed but should have failed")
+
+################### remove_whitespace
+result = remove_whitespace("Kyle Laughlin")
+assert_equal("KyleLaughlin", result, "Expected \"KyleLaughlin\" but failed")

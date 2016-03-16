@@ -6,3 +6,13 @@ require 'pry'
 def name_generator(name)
   "xX_StRiNg_Xx"
 end
+
+#binding.pry
+
+def encasing_characters(string)
+  string.prepend("xX_").concat("_Xx")
+end
+
+def remove_whitespace(string)
+  string.gsub(/\s/,"")
+end
