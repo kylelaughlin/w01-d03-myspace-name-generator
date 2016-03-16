@@ -10,9 +10,9 @@ require 'pry'
 #
 #Returns the modified myspace name
 def myspace_name_generator(name)
-  myspace_name = remove_whitespace(name)
-  myspace_name = remove_punctuation(myspace_name)
-  myspace_name = remove_numbers(myspace_name)
+  #myspace_name = remove_whitespace(name)
+  myspace_name = leave_numerical_characters(name)
+  #myspace_name = remove_numbers(myspace_name)
   myspace_name = alternate_capitalization(myspace_name)
   myspace_name = encasing_characters(myspace_name)
 end
@@ -31,22 +31,17 @@ end
 # +name: a string representing the name
 #
 #Returns the modified name with all whitespaces removed
-def remove_whitespace(name)
-  name.gsub(/\s/,"")
-end
+#def remove_whitespace(name)
+#  name.gsub(/\s/,"")
+#end
 
 #Removes all characters that are not A-Z, a-z or 0-9
 #
 # +name: a string representing the modified name
 #
 #Returns the modified name that contains only A-Z, a-z, and 0-9 characters
-def remove_punctuation(name)
-  name.gsub(/\W/,"")
-end
-
-#Removes 
-def remove_numbers(name)
-  name.gsub(/[0-9]/,"")
+def leave_numerical_characters(name)
+  name.gsub(/[^A-Za-z]/,"")
 end
 
 def alternate_capitalization(name)
