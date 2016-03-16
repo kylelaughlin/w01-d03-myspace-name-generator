@@ -4,7 +4,11 @@
 require 'pry'
 
 def name_generator(name)
-  "xX_StRiNg_Xx"
+  myspace_name = remove_whitespace(name)
+  myspace_name = remove_punctuation(myspace_name)
+  myspace_name = remove_numbers(myspace_name)
+  myspace_name = alternate_capitalization(myspace_name)
+  myspace_name = encasing_characters(myspace_name)
 end
 
 #binding.pry
@@ -38,4 +42,3 @@ def alternate_capitalization(string)
   end
   alt_cap_string
 end
-binding.pry
