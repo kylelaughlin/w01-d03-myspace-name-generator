@@ -21,6 +21,8 @@ end
 
 #TEST ONE#########
 result = name_generator("String")
-assert_equal("xX_StRiNgXx_",result,"Expected xX_StRiNgXx_ but failed")
+assert_equal("xX_StRiNg_Xx",result,"Expected xX_StRiNg_Xx but failed")
 
 #TEST TWO#########
+result = name_generator("String")
+refute_equal()

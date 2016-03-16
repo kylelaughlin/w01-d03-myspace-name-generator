@@ -4,5 +4,5 @@
 require 'pry'
 
 def name_generator(name)
-  "xX_StRiNgXx_"
+  "xX_StRiNg_Xx"
 end
