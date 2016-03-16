@@ -20,3 +20,7 @@ end
 def remove_punctuation(string)
   string.gsub(/\W/,"")
 end
+
+def remove_numbers(string)
+  string.gsub(/[0-9]/,"")
+end

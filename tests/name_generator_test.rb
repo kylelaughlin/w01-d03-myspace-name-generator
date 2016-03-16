@@ -61,5 +61,7 @@ but returned \"#{result}\"")
 
 ################### remove_numbers
 result = remove_numbers("45Kyle56Laugh4367lin3")
-assert_equal("KyleLaughlin", resutl, "remove_numbers method expected \"KyleLaughlin\" \
+assert_equal("KyleLaughlin", result, "remove_numbers method expected \"KyleLaughlin\" \
 but returned \"#{result}\"")
+
+################### |
