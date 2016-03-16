@@ -40,6 +40,16 @@ result = myspace_name_generator(" <<Kyle Laughlin1988>> ")
 assert_equal("xX_KyLeLaUgHlIn_Xx", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
 but returned \"#{result}\"")
 
+#################### name_generator
+result = myspace_name_generator("")
+assert_equal("", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
+but returned \"#{result}\"")
+
+#################### name_generator
+result = myspace_name_generator("348:?# 5&*  ")
+assert_equal("", result, "name_generator method expected \"xX_KyLeLaUgHlIn_Xx\" \
+but returned \"#{result}\"")
+
 #################### encasing_characters
 result = encasing_characters("KyleLaughlin")
 assert_equal("xX_KyleLaughlin_Xx", result, "encasing_characters method expected \

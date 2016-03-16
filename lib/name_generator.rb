@@ -20,7 +20,10 @@ end
 #
 # Returns the modified name (string)
 def encasing_characters(name)
-  name.prepend("xX_").concat("_Xx")
+  if name.length > 0
+    name.prepend("xX_").concat("_Xx")
+  end
+  name
 end
 
 # Removes all characters that are not A-Z, a-z, included whitespace
