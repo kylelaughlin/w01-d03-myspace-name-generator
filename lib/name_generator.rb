@@ -1,7 +1,6 @@
 # You'll have to create your own method(s) here and define them. Use patterns like
 # you've seen elsewhere.
 
-
 # Run string modification methods: leave_numerical_characters, alternate_capitalization,
 # and encasing_characters
 #
@@ -9,7 +8,7 @@
 #
 # Returns the modified myspace name
 def myspace_name_generator(name)
-  myspace_name = leave_numerical_characters(name)
+  myspace_name = leave_letter_characters(name)
   myspace_name = alternate_capitalization(myspace_name)
   myspace_name = encasing_characters(myspace_name)
 end
@@ -31,7 +30,7 @@ end
 # +name: a string representing the modified name
 #
 # Returns the modified name that contains only A-Z and a-z characters
-def leave_numerical_characters(name)
+def leave_letter_characters(name)
   name.gsub(/[^A-Za-z]/,"")
 end
 
